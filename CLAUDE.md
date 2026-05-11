@@ -1,15 +1,13 @@
-# CLAUDE.md - SimpMusic Project Guide for AI Agents
+# CLAUDE.md - Auvro Project Guide for AI Agents
 
 ## 🌐 Language Rule
 
-**Response language**: Always respond in **English**, and after each sentence, add a **Vietnamese translation in parentheses**.
-Example: "Hello, how are you? (Xin chào, bạn khỏe không?)"
-
-This applies to all conversations in this project. The user is using Max plan so token cost is not a concern.
+**Response language**: Always respond in **English**.
+This applies to all conversations in this project. The user is using Max plan so token cost is a concern.
 
 ## 📋 Project Overview
 
-**SimpMusic** is a FOSS (Free and Open Source Software) YouTube Music client for Android and Desktop, built with Compose Multiplatform.
+**Auvro** is a FOSS (Free and Open Source Software) YouTube Music client for Android and Desktop, built with Compose Multiplatform.
 
 ### Main Purpose
 - Stream music from YouTube Music and YouTube for free, ad-free, with background playback
@@ -17,7 +15,7 @@ This applies to all conversations in this project. The user is using Max plan so
 - Support both Android and Desktop (Windows, macOS, Linux)
 
 ### Basic Information
-- **Package name**: `com.maxrave.simpmusic`
+- **Package name**: `com.maxrave.Auvro`
 - **Primary language**: Kotlin
 - **UI Framework**: Jetpack Compose / Compose Multiplatform
 - **Architecture**: Clean Architecture + MVVM
@@ -109,7 +107,7 @@ Service modules:
 - **kotlinYtmusicScraper/**: YouTube Music API scraper
 - **spotify/**: Spotify Web API integration (Canvas, Lyrics)
 - **aiService/**: AI features (OpenAI, Gemini integration)
-- **lyricsService/**: Lyrics fetching (LRCLIB, SimpMusic Lyrics, BetterLyrics)
+- **lyricsService/**: Lyrics fetching (LRCLIB, Auvro Lyrics, BetterLyrics)
 - **kizzy/**: Discord Rich Presence
 - **ktorExt/**: Ktor extensions for networking
 
@@ -328,7 +326,7 @@ Before implementing code, researching code, or answering technical questions, th
 - **Required Dependencies**:
   - VLCJ: Audio playback (bundled via vlc-setup plugin)
 - **Features**:
-  - Deep link support (`simpmusic://` and `simpmusic.org`)
+  - Deep link support (`Auvro://` and `Auvro.org`)
   - Mini Player window (always-on-top, resizable, draggable)
   - Crash dialog
   - Custom title bar (disabled in VM environments)
@@ -347,7 +345,7 @@ Before implementing code, researching code, or answering technical questions, th
 
 ### Desktop Player (VLCJ - replaced GStreamer post-1.0.4)
 
-**Location**: `core/media/media-jvm/src/main/java/com/simpmusic/media_jvm/VlcPlayerAdapter.kt`
+**Location**: `core/media/media-jvm/src/main/java/com/Auvro/media_jvm/VlcPlayerAdapter.kt`
 
 - Uses **VLCJ** library for audio playback (GStreamer was removed)
 - VLC native libraries bundled per platform via `vlc-setup` Gradle plugin in `composeApp/build.gradle.kts`
@@ -385,7 +383,7 @@ See `CODE_OF_CONDUCT.md`
 6. PR description: Explain changes and reasoning
 
 ### Translation
-- Use Crowdin: https://crowdin.com/project/simpmusic
+- Use Crowdin: https://crowdin.com/project/Auvro
 - Don't edit translation files directly
 
 ## 📚 References
@@ -405,7 +403,7 @@ See `CODE_OF_CONDUCT.md`
 - [VLCJ](https://github.com/caprica/vlcj)
 
 ### Community
-- Website: https://simpmusic.org
+- Website: https://Auvro.org
 - Discord: https://discord.gg/Rq5tWVM9Hg
 - GitHub Issues: Bug reports and feature requests
 
@@ -456,7 +454,7 @@ if (getPlatform() == Platform.Android) {
 - **320kbps audio stream option**: Higher quality streaming preference
 - **Parallel download**: Improved download speed
 - **Character-level animated lyrics**: Word-by-word lyrics with spring animations
-- **SimpMusic Chart**: Chart playlists integrated into Library screen
+- **Auvro Chart**: Chart playlists integrated into Library screen
 - **Favorites**: Liked songs feature with UI integration
 - **Custom OpenAI base URL**: Support for compatible API endpoints
 
@@ -465,10 +463,10 @@ if (getPlatform() == Platform.Android) {
 - **Analytics/Local Tracking**: Track top artists, albums, and tracks locally (no remote tracking)
 - **Auto Backup**: Automatic backup settings
 - **Custom Title Bar**: Desktop window control with transparency support
-- **SimpMusic Lyrics voting**: Vote functionality for community lyrics
+- **Auvro Lyrics voting**: Vote functionality for community lyrics
 
 ### New Features (post-1.0.4, dev branch)
-- **Deep link support**: `simpmusic://` and `simpmusic.org` URL schemes
+- **Deep link support**: `Auvro://` and `Auvro.org` URL schemes
 - **Desktop Crash dialog**: Error reporting UI for desktop
 - **Playback speed/pitch controls**: Redesigned UI with improved animations
 - **VM environment detection**: Disable transparency and custom titlebar in VMs
@@ -495,7 +493,7 @@ After completing any of the following types of changes, the AI agent **MUST** up
 
 ---
 
-*This document helps AI Agents quickly understand the SimpMusic project. Update regularly when there are major changes to architecture or structure.*
+*This document helps AI Agents quickly understand the Auvro project. Update regularly when there are major changes to architecture or structure.*
 
 **Last updated**: 2026-03-14
 **Project version**: Check latest release on GitHub
