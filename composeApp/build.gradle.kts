@@ -41,7 +41,7 @@ kotlin {
         freeCompilerArgs.add("-Xexpect-actual-classes")
     }
     android {
-        namespace = "com.maxrave.simpmusic.composeapp"
+        namespace = "com.anup.auvro.composeapp"
         compileSdk = 37
         minSdk = 26
         withJava()
@@ -185,7 +185,7 @@ vlcSetup {
 
 compose.desktop {
     application {
-        mainClass = "com.maxrave.simpmusic.MainKt"
+        mainClass = "com.anup.auvro.MainKt"
         jvmArgs += "--add-opens=java.base/java.nio=ALL-UNNAMED"
 
         nativeDistributions {
@@ -205,7 +205,7 @@ compose.desktop {
             }
             targetFormats(*listTarget.toTypedArray())
             modules("jdk.unsupported")
-            packageName = "SimpMusic"
+            packageName = "Auvro"
             macOS {
                 val formatedDate =
                     Instant.now().let {
@@ -233,10 +233,10 @@ compose.desktop {
                             <key>CFBundleTypeRole</key>
                             <string>Viewer</string>
                             <key>CFBundleURLName</key>
-                            <string>com.maxrave.simpmusic.deeplink</string>
+                            <string>com.anup.auvro.deeplink</string>
                             <key>CFBundleURLSchemes</key>
                             <array>
-                                <string>simpmusic</string>
+                                <string>auvro</string>
                             </array>
                         </dict>
                     </array>
@@ -272,7 +272,7 @@ compose.desktop {
 }
 
 buildkonfig {
-    packageName = "com.maxrave.simpmusic"
+    packageName = "com.anup.auvro"
     exposeObjectWithName = "BuildKonfig"
     defaultConfigs {
         val versionName =
@@ -348,7 +348,7 @@ afterEvaluate {
     }
 
     fun packAppImage(isRelease: Boolean) {
-        val appName = "SimpMusic"
+        val appName = "Auvro"
         val appDirSrc = project.file("appimage")
         val packageOutput =
             if (isRelease) {
@@ -403,23 +403,23 @@ afterEvaluate {
         FileUtils.copyDirectory(appDirSrc, appDir)
         FileUtils.copyDirectory(packageOutput, appDir)
 
-        // Generate simpmusic.desktop dynamically
+        // Generate auvro.desktop dynamically
         val versionName =
             libs.versions.version.name
                 .get()
-        val desktopFile = appDir.resolve("simpmusic.desktop")
+        val desktopFile = appDir.resolve("auvro.desktop")
         desktopFile.writeText(
             """[Desktop Entry]
             |Type=Application
             |Version=1.0
-            |Name=SimpMusic
-            |Comment=SimpMusic v$versionName - FOSS YouTube Music Client
-            |Exec=bin/SimpMusic %u
-            |Icon=simpmusic
+            |Name=Auvro
+            |Comment=Auvro v$versionName - FOSS YouTube Music Client
+            |Exec=bin/Auvro %u
+            |Icon=auvro
             |Terminal=false
             |Categories=Audio;AudioVideo;
-            |StartupWMClass=com-maxrave-simpmusic-MainKt
-            |MimeType=x-scheme-handler/simpmusic;
+            |StartupWMClass=com-anup-auvro-MainKt
+            |MimeType=x-scheme-handler/auvro;
             |
             """.trimMargin(),
         )
@@ -434,9 +434,9 @@ afterEvaluate {
             |
             |# Install icon to XDG icon directories for desktop integration
             |ICON_DIR="${'$'}HOME/.local/share/icons/hicolor/256x256/apps"
-            |if [ ! -f "${'$'}ICON_DIR/simpmusic.png" ] || [ "${'$'}HERE/simpmusic.png" -nt "${'$'}ICON_DIR/simpmusic.png" ]; then
+            |if [ ! -f "${'$'}ICON_DIR/auvro.png" ] || [ "${'$'}HERE/auvro.png" -nt "${'$'}ICON_DIR/auvro.png" ]; then
             |    mkdir -p "${'$'}ICON_DIR"
-            |    cp "${'$'}HERE/simpmusic.png" "${'$'}ICON_DIR/simpmusic.png"
+            |    cp "${'$'}HERE/auvro.png" "${'$'}ICON_DIR/auvro.png"
             |    gtk-update-icon-cache -f -t "${'$'}HOME/.local/share/icons/hicolor" 2>/dev/null || true
             |fi
             |
@@ -444,7 +444,7 @@ afterEvaluate {
             |DESKTOP_DIR="${'$'}HOME/.local/share/applications"
             |mkdir -p "${'$'}DESKTOP_DIR"
             |APPIMAGE_PATH="${'$'}{APPIMAGE:-${'$'}SELF}"
-            |sed "s|Exec=bin/SimpMusic|Exec=${'$'}APPIMAGE_PATH|" "${'$'}HERE/simpmusic.desktop" > "${'$'}DESKTOP_DIR/com-maxrave-simpmusic-MainKt.desktop"
+            |sed "s|Exec=bin/Auvro|Exec=${'$'}APPIMAGE_PATH|" "${'$'}HERE/auvro.desktop" > "${'$'}DESKTOP_DIR/com-anup-auvro-MainKt.desktop"
             |update-desktop-database "${'$'}DESKTOP_DIR" 2>/dev/null || true
             |
             |cd "${'$'}HERE"

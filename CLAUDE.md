@@ -15,7 +15,7 @@ This applies to all conversations in this project. The user is using Max plan so
 - Support both Android and Desktop (Windows, macOS, Linux)
 
 ### Basic Information
-- **Package name**: `com.maxrave.Auvro`
+- **Package name**: `com.anup.Auvro`
 - **Primary language**: Kotlin
 - **UI Framework**: Jetpack Compose / Compose Multiplatform
 - **Architecture**: Clean Architecture + MVVM
@@ -361,7 +361,7 @@ Before implementing code, researching code, or answering technical questions, th
 
 #### Crossfade & DJ-style Transition (added in v1.0.4)
 
-**Location**: `core/media/media3/src/main/java/com/maxrave/media3/exoplayer/CrossfadeExoPlayerAdapter.kt`
+**Location**: `core/media/media3/src/main/java/com/anup/media3/exoplayer/CrossfadeExoPlayerAdapter.kt`
 
 - DJ-style crossfade with adjustable duration
 - Requires 320kbps stream preference to enable DJ mode
@@ -497,4 +497,4 @@ After completing any of the following types of changes, the AI agent **MUST** up
 
 **Last updated**: 2026-03-14
 **Project version**: Check latest release on GitHub
-**Maintained by**: maxrave-dev and contributors
+**Maintained by**: AnupSharma12 and contributors

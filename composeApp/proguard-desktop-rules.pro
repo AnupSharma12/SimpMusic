@@ -46,10 +46,10 @@
 -keep class org.jsoup.** { *; }
 -dontwarn org.jsoup.**
 
--keep class com.maxrave.domain.data.model.** { *; }
+-keep class com.anup.domain.data.model.** { *; }
 -keep class com.mohamedrejeb.ksoup.html.** { *; }
 -keep class org.schabi.newpipe.extractor.downloader.** { *; }
--keep class dev.maxrave.pipepipe.extractor.downloader.** { *; }
+-keep class dev.anup.pipepipe.extractor.downloader.** { *; }
 
 # Koin
 -keep class org.koin.core.** { *; }
@@ -95,10 +95,10 @@
 
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 -dontwarn kotlinx.serialization.internal.ClassValueReferences
--keep class com.maxrave.simpmusic.data.model.** { *; }
--keep class com.maxrave.simpmusic.extension.AllExtKt { *; }
--keep class com.maxrave.simpmusic.extension.AllExtKt$* { *; }
--keep class com.maxrave.kotlinytmusicscraper.extension.MapExtKt$* { *; }
+-keep class com.anup.auvro.data.model.** { *; }
+-keep class com.anup.auvro.extension.AllExtKt { *; }
+-keep class com.anup.auvro.extension.AllExtKt$* { *; }
+-keep class com.anup.kotlinytmusicscraper.extension.MapExtKt$* { *; }
 
 ## Removes all Logs as they cause perfomance issues in prod
 #-assumenosideeffects class android.util.Log {
@@ -110,7 +110,7 @@
 #}
 ## Rules for NewPipeExtractor
 -keep class org.schabi.newpipe.extractor.timeago.patterns.** { *; }
--keep class dev.maxrave.pipepipe.extractor.timeago.patterns.** { *; }
+-keep class dev.anup.pipepipe.extractor.timeago.patterns.** { *; }
 -keep class org.mozilla.javascript.** { *; }
 -dontwarn org.mozilla.javascript.tools.**
 # Please add these rules to your existing keep rules in order to suppress warning
@@ -185,7 +185,7 @@
 -keep class com.liskovsoft.** { *; }
 -keep interface com.liskovsoft.** { *; }
 -keep class com.eclipsesource.v8.** { *; }
--keep class com.maxrave.kotlinytmusicscraper.** { *; }
+-keep class com.anup.kotlinytmusicscraper.** { *; }
 
 -dontwarn javax.script.AbstractScriptEngine
 -dontwarn javax.script.Bindings
@@ -226,8 +226,8 @@
 ## Rules for NewPipeExtractor
 -keep class org.schabi.newpipe.extractor.** { *; }
 -keep class org.schabi.newpipe.extractor.timeago.patterns.** { *; }
--keep class dev.maxrave.pipepipe.extractor.** { *; }
--keep class dev.maxrave.pipepipe.extractor.timeago.patterns.** { *; }
+-keep class dev.anup.pipepipe.extractor.** { *; }
+-keep class dev.anup.pipepipe.extractor.timeago.patterns.** { *; }
 -keep class org.mozilla.javascript.** { *; }
 -keep class org.mozilla.classfile.ClassFileWriter
 -dontwarn org.mozilla.javascript.tools.**
@@ -239,21 +239,21 @@
 -dontwarn java.beans.Introspector
 -dontwarn java.beans.PropertyDescriptor
 
--dontwarn com.maxrave.data.di.loader.LoaderKt
--dontwarn com.maxrave.media3.ui.MediaPlayerViewKt
+-dontwarn com.anup.data.di.loader.LoaderKt
+-dontwarn com.anup.media3.ui.MediaPlayerViewKt
 
--keep class com.maxrave.data.di.loader.LoaderKt { *; }
--keep class com.maxrave.data.mapping.MappingKt { *; }
--keep class com.maxrave.data.extension.** { *; }
--keep class com.maxrave.data.di.** { *; }
+-keep class com.anup.data.di.loader.LoaderKt { *; }
+-keep class com.anup.data.mapping.MappingKt { *; }
+-keep class com.anup.data.extension.** { *; }
+-keep class com.anup.data.di.** { *; }
 
--keep class com.maxrave.kotlinytmusicscraper.** { *; }
+-keep class com.anup.kotlinytmusicscraper.** { *; }
 
--keep class org.simpmusic.lyrics.parser.** { *; }
--keep class org.simpmusic.lyrics.models.** { *; }
--keep class org.simpmusic.nowplayingcenter.** { *; }
+-keep class org.auvro.lyrics.parser.** { *; }
+-keep class org.auvro.lyrics.models.** { *; }
+-keep class org.auvro.nowplayingcenter.** { *; }
 -keep class io.github.selemba1000.** { *; }
--keep class com.simpmusic.lyrics.parser.** { *; }
+-keep class com.auvro.lyrics.parser.** { *; }
 
 # dbus-java (used by JMTC/NPYC for Linux MPRIS)
 -keep class org.freedesktop.dbus.** { *; }

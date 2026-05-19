@@ -1,8 +1,8 @@
-package org.simpmusic.crashlytics
+package org.auvro.crashlytics
 
 import android.content.Context
 import android.util.Log
-import com.maxrave.domain.data.player.PlayerError
+import com.anup.domain.data.player.PlayerError
 import io.sentry.Sentry
 import io.sentry.android.core.SentryAndroid
 

@@ -64,4 +64,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: desktop-appimage-package
-          path: composeApp/build/appimage/main-release/SimpMusic-x86_64.AppImage
+          path: composeApp/build/appimage/main-release/Auvro-x86_64.AppImage

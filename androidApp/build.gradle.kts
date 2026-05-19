@@ -16,11 +16,11 @@ plugins {
 android {
     val abis = arrayOf("armeabi-v7a", "arm64-v8a", "x86_64")
 
-    namespace = "com.maxrave.simpmusic"
+    namespace = "com.anup.auvro"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.maxrave.simpmusic"
+        applicationId = "com.anup.auvro"
         minSdk = 26
         targetSdk = 36
         versionCode =
@@ -173,7 +173,7 @@ dependencies {
 }
 
 sentry {
-    org.set("simpmusic")
+    org.set("auvro")
     projectName.set("android")
     ignoredFlavors.set(setOf("foss"))
     ignoredBuildTypes.set(setOf("debug"))

@@ -1,8 +1,8 @@
-package org.simpmusic.crashlytics
+package org.auvro.crashlytics
 
 import android.content.Context
-import com.maxrave.domain.data.player.PlayerError
-import com.maxrave.logger.Logger
+import com.anup.domain.data.player.PlayerError
+import com.anup.logger.Logger
 
 // Sent crash to Sentry
 fun reportCrash(throwable: Throwable) {
